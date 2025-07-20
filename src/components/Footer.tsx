@@ -20,9 +20,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "#" },
-    { icon: Linkedin, href: "#" },
-    { icon: Facebook, href: "#" }
+    { icon: Instagram, href: "https://www.instagram.com/agencialavigo/" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/ag%C3%AAncialavigo" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577625736397" }
   ];
 
   const scrollToTop = () => {
@@ -99,11 +99,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-secondary" />
-                <span className="text-muted-foreground">+55 (11) 9999-9999</span>
+                <span className="text-muted-foreground">+55 (16) 99160-9339</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-secondary" />
-                <span className="text-muted-foreground">São Paulo, SP</span>
+                <span className="text-muted-foreground">Ibitinga, SP</span>
               </div>
             </div>
           </div>

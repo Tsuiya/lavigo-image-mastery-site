@@ -16,14 +16,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      info: "+55 (11) 9999-9999",
-      action: "tel:+5511999999999"
+      info: "+55 (16) 99160-9339",
+      action: "tel:+5516991609339"
     },
     {
       icon: MapPin,
       title: "Localização",
-      info: "São Paulo, SP",
-      action: "#"
+      info: "Ibitinga, SP",
+      action: "https://www.google.com/maps/place/Ag%C3%AAncia+Lavigo/@-21.7577172,-48.831593,21z/data=!4m6!3m5!1s0x94bf2992cb22b801:0x543c7f9d14ec33c0!8m2!3d-21.7576747!4d-48.8316431!16s%2Fg%2F11ydzc5wzy?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
     }
   ];
 
