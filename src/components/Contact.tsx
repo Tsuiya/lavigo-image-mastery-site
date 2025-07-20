@@ -16,14 +16,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      info: "+55 (11) 9999-9999",
-      action: "tel:+5511999999999"
+      info: "+55 (16) 99160-9339",
+      action: "tel:+5516991609339"
     },
     {
       icon: MapPin,
       title: "Localização",
-      info: "São Paulo, SP",
-      action: "#"
+      info: "Ibitinga, SP",
+      action: "https://maps.app.goo.gl/YSojg2n9YHwSLFhG9"
     }
   ];
 
