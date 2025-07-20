@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Play, Upload, Plus } from "lucide-react";
+import { Play } from "lucide-react";
 
 const Portfolio = () => {
   // Placeholder videos - será substituído por uploads reais
@@ -105,34 +105,6 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* Upload Section for Admin */}
-        <div className="bg-card/50 border border-border/50 rounded-xl p-8 text-center backdrop-blur-sm">
-          <div className="max-w-2xl mx-auto">
-            <div className="mb-6">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Upload className="h-8 w-8 text-secondary" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">
-                Área de Upload
-              </h3>
-              <p className="text-muted-foreground">
-                Espaço dedicado para adicionar novos projetos ao nosso portfolio. 
-                Em breve, essa funcionalidade estará disponível para administradores.
-              </p>
-            </div>
-            
-            <div className="border-2 border-dashed border-border rounded-lg p-8 hover:border-secondary/50 transition-colors duration-300">
-              <Plus className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground mb-4">
-                Arraste e solte seus arquivos aqui ou clique para selecionar
-              </p>
-              <Button variant="outline" disabled>
-                Selecionar Arquivos
-                <span className="ml-2 text-xs">(Em desenvolvimento)</span>
-              </Button>
-            </div>
-          </div>
-        </div>
 
         {/* View More */}
         <div className="text-center mt-12">
