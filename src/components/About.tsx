@@ -6,32 +6,32 @@ import { Users, Award, Target, Zap } from "lucide-react";
 const About = () => {
   const values = [
     {
-      icon: Target,
-      title: "Precisão",
-      description: "Cada projeto é executado com atenção meticulosa aos detalhes, garantindo resultados que superam expectativas."
-    },
-    {
-      icon: Zap,
-      title: "Inovação",
-      description: "Utilizamos as mais recentes tecnologias e tendências para manter sua marca sempre à frente da concorrência."
-    },
-    {
       icon: Award,
       title: "Excelência",
-      description: "Compromisso com a qualidade premium em todos os aspectos do nosso trabalho, sem exceções."
+      description: "Padrão 4K como mínimo aceitável. Cada quadro milimetricamente calibrado para erguer estruturas de poder."
     },
     {
       icon: Users,
-      title: "Parceria",
-      description: "Construímos relacionamentos duradouros, trabalhando como uma extensão da sua equipe."
+      title: "Exclusividade", 
+      description: "Atendimento customizado; número limitado de clientes. Apenas 10-15 marcas por mês recebem nosso foco total."
+    },
+    {
+      icon: Target,
+      title: "Transparência",
+      description: "Metas claras, relatórios detalhados e entrega dentro do prazo. Processos forjados para resultados imperiais."
+    },
+    {
+      icon: Zap,
+      title: "Liderança",
+      description: "Guiamos nossos clientes ao topo do ranking de engajamento e vendas. Você lidera, nós executamos o poder."
     }
   ];
 
   const stats = [
-    { number: "150+", label: "Projetos Entregues" },
-    { number: "50+", label: "Clientes Satisfeitos" },
-    { number: "5", label: "Anos de Experiência" },
-    { number: "98%", label: "Taxa de Satisfação" }
+    { number: "10-15", label: "Marcas/Mês" },
+    { number: "4K", label: "Padrão Mínimo" },
+    { number: "72h", label: "Execução" },
+    { number: "360°", label: "Estratégia" }
   ];
 
   return (
@@ -40,11 +40,15 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Sobre a <span className="text-secondary">Lavigo</span>
+            Nós somos a <span className="text-secondary">Lavigo</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Somos uma agência de marketing premium que combina criatividade, estratégia e tecnologia 
-            para ajudar marcas a dominarem sua imagem no mercado.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6">
+            Em cada quadro 4K, em cada cor milimetricamente calibrada, erguemos estruturas de poder e autoridade. 
+            Nosso compromisso é com a perfeição absoluta: um padrão mínimo que desafia o ordinário e converte espectadores em súditos leais.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Nossa jornada nasce da convicção de que toda PME merece comandar seu mercado com imagens magneticamente 
+            poderosas e estratégias incrivelmente precisas.
           </p>
         </div>
 
@@ -53,29 +57,29 @@ const About = () => {
           <div>
             <div className="mb-6">
               <Badge variant="secondary" className="text-sm px-3 py-1 mb-4">
-                Nossa Filosofia
+                Manifesto Imperial
               </Badge>
               <h3 className="text-3xl font-bold text-foreground mb-4">
-                Transformamos visões em realidade visual
+                Nós não seguimos tendências — nós as decretamos
               </h3>
             </div>
             
             <div className="space-y-4 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                Na Lavigo, acreditamos que cada marca tem uma história única para contar. 
-                Nossa missão é capturar essa essência e traduzi-la em experiências visuais 
-                impactantes que conectam, engajam e convertem.
+                Atendemos com exclusividade apenas 10 a 15 marcas por mês, garantindo foco total, 
+                atendimento sob medida e processos forjados para resultados imperiais. 
+                Aqui, cada projeto é um reinado, cada entrega, um decreto visual que impõe respeito.
               </p>
               <p className="text-lg leading-relaxed">
-                Com uma abordagem centrada em resultados e um olhar sempre voltado para a 
-                inovação, ajudamos empresas de todos os portes a construírem uma presença 
-                digital forte e uma identidade visual memorável.
+                Colocamos à disposição o cetro tecnológico da Lavigo: diagnóstico gratuito, 
+                estratégia 360° e execução em até 72 horas. Convidamos você a assumir o trono 
+                da sua história e ser soberano de sua própria narrativa.
               </p>
             </div>
 
             <div className="mt-8">
               <Button variant="premium" size="lg">
-                Conheça Nossa Equipe
+                Diagnóstico Gratuito
               </Button>
             </div>
           </div>
@@ -100,10 +104,10 @@ const About = () => {
         <div>
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Nossos <span className="text-secondary">Valores</span>
+              Nossos <span className="text-secondary">Valores Imperiais</span>
             </h3>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Os princípios que norteiam cada projeto e relacionamento que construímos.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Os pilares de poder que estabelecem nossa autoridade máxima em marketing visual e performance.
             </p>
           </div>
 
@@ -130,13 +134,14 @@ const About = () => {
         <div className="text-center mt-20">
           <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 border border-border/50">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Pronto para começar seu projeto?
+              Pronto para assumir o comando?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Vamos conversar sobre como podemos ajudar sua marca a alcançar novos patamares.
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Seja soberano de sua própria narrativa. Na Lavigo, você lidera, nós executamos o poder 
+              com diagnóstico gratuito e estratégia 360°.
             </p>
             <Button variant="premium" size="lg" className="text-lg px-8 py-6">
-              Iniciar Conversa
+              Diagnóstico Gratuito
             </Button>
           </div>
         </div>

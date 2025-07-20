@@ -6,27 +6,27 @@ const Services = () => {
   const services = [
     {
       icon: Camera,
-      title: "Fotografia Profissional",
-      description: "Capturamos a essência da sua marca com imagens de alta qualidade que contam histórias e conectam com seu público.",
-      features: ["Fotografia corporativa", "Ensaios de produto", "Eventos empresariais", "Retratos executivos"]
+      title: "Comando Visual 4K",
+      description: "Padrão 4K como mínimo aceitável. Cada quadro milimetricamente calibrado para erguer estruturas de poder e autoridade visual.",
+      features: ["Fotografia imperial de produtos", "Ensaios corporativos de autoridade", "Vídeos institucionais dominantes", "Tratamento em padrão superior"]
     },
     {
       icon: Video,
-      title: "Produção de Vídeo",
-      description: "Criamos conteúdo audiovisual impactante que transmite sua mensagem de forma envolvente e memorável.",
-      features: ["Vídeos institucionais", "Comerciais", "Documentários", "Conteúdo para redes sociais"]
+      title: "Decretos em Movimento",
+      description: "Narrativas que convertem espectadores em súditos leais. Do conceito à execução em 72 horas, criamos conteúdo que impõe respeito.",
+      features: ["Vídeos que decretam tendências", "Motion graphics imperiais", "Conteúdo para domínio digital", "Edição com precisão cirúrgica"]
     },
     {
       icon: Palette,
-      title: "Design Criativo",
-      description: "Desenvolvemos identidades visuais consistentes e materials gráficos que fortalecem sua presença no mercado.",
-      features: ["Identidade visual", "Design gráfico", "Materiais impressos", "Interfaces digitais"]
+      title: "Design de Autoridade",
+      description: "Identidades visuais que comandam mercados. Criamos designs magneticamente poderosos que estabelecem liderança visual.",
+      features: ["Branding de comando imperial", "Interfaces de dominação digital", "Materiais de autoridade suprema", "Sistemas visuais de poder"]
     },
     {
       icon: TrendingUp,
-      title: "Marketing Estratégico",
-      description: "Estratégias de marketing personalizadas que posicionam sua marca como líder no seu segmento.",
-      features: ["Consultoria estratégica", "Gestão de redes sociais", "Campanhas publicitárias", "Análise de mercado"]
+      title: "Estratégia 360° Imperial",
+      description: "Diagnóstico gratuito, estratégia sob medida e execução em 72h. Colocamos o cetro tecnológico à disposição do seu reinado.",
+      features: ["Diagnóstico gratuito completo", "Estratégia 360° personalizada", "Tráfego pago para dominação", "Relatórios de performance imperial"]
     }
   ];
 
@@ -36,11 +36,11 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Nossos <span className="text-secondary">Serviços</span>
+            Nossos <span className="text-secondary">Decretos Visuais</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Oferecemos soluções completas em marketing visual e estratégia, 
-            combinando criatividade, tecnologia e expertise para resultados excepcionais.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            Cada projeto é um reinado, cada entrega, um decreto visual que impõe respeito. 
+            Atendimento exclusivo para apenas 10-15 marcas por mês, garantindo foco total e resultados imperiais.
           </p>
         </div>
 
@@ -83,13 +83,14 @@ const Services = () => {
         <div className="text-center">
           <div className="bg-gradient-accent rounded-2xl p-8 md:p-12 shadow-elegant">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Pronto para dominar sua imagem?
+              Pronto para assumir o trono?
             </h3>
-            <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-              Entre em contato conosco e descubra como podemos elevar sua marca ao próximo nível.
+            <p className="text-xl text-foreground/80 mb-8 max-w-3xl mx-auto">
+              Seja soberano de sua narrativa. Receba diagnóstico gratuito e estratégia 360° 
+              para comandar seu mercado com autoridade imperial.
             </p>
             <Button variant="hero" size="lg" className="text-lg px-8 py-6 bg-background text-foreground hover:bg-background/90">
-              Solicitar Orçamento
+              Diagnóstico Gratuito
             </Button>
           </div>
         </div>

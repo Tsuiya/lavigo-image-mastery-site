@@ -39,11 +39,11 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Entre em <span className="text-secondary">Contato</span>
+            Assuma o <span className="text-secondary">Comando</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Pronto para dominar sua imagem? Vamos conversar sobre seu próximo projeto 
-            e como podemos ajudar sua marca a alcançar novos patamares.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            Convidamos você a assumir o trono da sua história. Seja soberano de sua própria narrativa. 
+            Na Lavigo, você lidera, nós executamos o poder com diagnóstico gratuito e estratégia 360°.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const Contact = () => {
           <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-elegant">
             <CardHeader>
               <CardTitle className="text-2xl text-foreground">
-                Solicite um Orçamento
+                Diagnóstico Imperial Gratuito
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -169,13 +169,14 @@ const Contact = () => {
             {/* Call to Action */}
             <div className="bg-gradient-accent rounded-xl p-8 text-center">
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Consultoria Gratuita
+                Diagnóstico Imperial Gratuito
               </h3>
               <p className="text-foreground/80 mb-6">
-                Agende uma conversa sem compromisso e descubra como podemos transformar sua marca.
+                Análise completa do seu reino digital + estratégia 360° personalizada. 
+                Execução em 72 horas para resultados imperiais.
               </p>
               <Button variant="hero" size="lg" className="bg-background text-foreground hover:bg-background/90">
-                Agendar Consultoria
+                Solicitar Diagnóstico
               </Button>
             </div>
           </div>

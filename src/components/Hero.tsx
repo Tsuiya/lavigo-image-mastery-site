@@ -23,37 +23,36 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in-up">
-            <span className="block">Domine</span>
-            <span className="block text-secondary">sua imagem</span>
+            <span className="block">Assuma o</span>
+            <span className="block text-secondary">trono da sua história</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Agência de marketing premium especializada em fotografia, vídeo, design e estratégias que elevam sua marca ao próximo nível.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            Nós não seguimos tendências — nós as decretamos. Com padrão 4K como mínimo e atendimento exclusivo para apenas 10-15 marcas por mês.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <Button variant="premium" size="lg" className="text-lg px-8 py-6">
-              Conhecer Nossos Serviços
+              Diagnóstico Gratuito
             </Button>
             <Button variant="hero" size="lg" className="text-lg px-8 py-6">
               <Play className="mr-2 h-5 w-5" />
-              Ver Portfolio
+              Ver Nossos Decretos Visuais
             </Button>
           </div>
 
-          {/* Services Preview */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 animate-scale-in" style={{ animationDelay: "0.6s" }}>
+          {/* Imperial Services */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 animate-scale-in" style={{ animationDelay: "0.6s" }}>
             {[
-              { name: "Fotografia", desc: "Profissional" },
-              { name: "Vídeo", desc: "Institucional" },
-              { name: "Design", desc: "Criativo" },
-              { name: "Marketing", desc: "Estratégico" }
+              { name: "Diagnóstico Gratuito", desc: "Análise completa do seu reino digital" },
+              { name: "Estratégia 360°", desc: "Plano imperial sob medida" },
+              { name: "Execução 72h", desc: "Decretos visuais em tempo imperial" }
             ].map((service, index) => (
               <div key={service.name} className="text-center group cursor-pointer">
-                <div className="bg-card/50 rounded-lg p-4 border border-border/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:shadow-elegant">
-                  <h3 className="font-semibold text-foreground mb-1">{service.name}</h3>
+                <div className="bg-card/50 rounded-lg p-6 border border-border/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:shadow-elegant">
+                  <h3 className="font-semibold text-foreground mb-2">{service.name}</h3>
                   <p className="text-sm text-secondary">{service.desc}</p>
                 </div>
               </div>
