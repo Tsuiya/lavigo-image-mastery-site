@@ -120,7 +120,33 @@ const Contact = () => {
                 />
               </div>
 
-              <Button variant="premium" className="w-full" size="lg">
+              <Button 
+                variant="premium" 
+                className="w-full" 
+                size="lg"
+                onClick={() => {
+                  // Collect form data
+                  const name = (document.getElementById('name') as HTMLInputElement)?.value || '';
+                  const company = (document.getElementById('company') as HTMLInputElement)?.value || '';
+                  const email = (document.getElementById('email') as HTMLInputElement)?.value || '';
+                  const phone = (document.getElementById('phone') as HTMLInputElement)?.value || '';
+                  const service = (document.getElementById('service') as HTMLSelectElement)?.value || '';
+                  const message = (document.getElementById('message') as HTMLTextAreaElement)?.value || '';
+                  
+                  // Create email body
+                  const emailBody = `
+Nome: ${name}
+Empresa: ${company}
+Email: ${email}
+Telefone: ${phone}
+Serviço de Interesse: ${service}
+Mensagem: ${message}
+                  `.trim();
+                  
+                  // Open email client
+                  window.open(`mailto:tsuiya.hachiman@gmail.com?subject=Solicitação de Orçamento - Lavigo&body=${encodeURIComponent(emailBody)}`, '_blank');
+                }}
+              >
                 <Send className="mr-2 h-5 w-5" />
                 Enviar Mensagem
               </Button>
@@ -132,7 +158,11 @@ const Contact = () => {
             {/* Contact Methods */}
             <div className="space-y-6">
               {contactInfo.map((contact, index) => (
-                <Card key={index} className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300 group cursor-pointer">
+                <Card 
+                  key={index} 
+                  className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300 group cursor-pointer"
+                  onClick={() => window.open(contact.action, "_blank")}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center group-hover:bg-secondary/20 transition-colors duration-300">
@@ -174,7 +204,12 @@ const Contact = () => {
               <p className="text-foreground/80 mb-6">
                 Agende uma conversa sem compromisso e descubra como podemos transformar sua marca.
               </p>
-              <Button variant="hero" size="lg" className="bg-background text-foreground hover:bg-background/90">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="bg-background text-foreground hover:bg-background/90"
+                onClick={() => window.open("https://wa.me/5516991609339", "_blank")}
+              >
                 Agendar Consultoria
               </Button>
             </div>

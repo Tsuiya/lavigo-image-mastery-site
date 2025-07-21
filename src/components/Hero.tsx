@@ -34,8 +34,13 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            <Button variant="premium" size="lg" className="text-lg px-8 py-6">
-              Conhecer Nossos Serviços
+            <Button 
+              variant="premium" 
+              size="lg" 
+              className="text-lg px-8 py-6"
+              onClick={() => window.open("https://wa.me/5516991609339", "_blank")}
+            >
+              Fale Conosco no WhatsApp
             </Button>
             <Button variant="hero" size="lg" className="text-lg px-8 py-6">
               <Play className="mr-2 h-5 w-5" />
@@ -46,12 +51,12 @@ const Hero = () => {
           {/* Services Preview */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 animate-scale-in" style={{ animationDelay: "0.6s" }}>
             {[
-              { name: "Fotografia", desc: "Profissional" },
-              { name: "Vídeo", desc: "Institucional" },
-              { name: "Design", desc: "Criativo" },
-              { name: "Marketing", desc: "Estratégico" }
+              { name: "Fotografia", desc: "Profissional", link: "/fotografia" },
+              { name: "Vídeo", desc: "Institucional", link: "/videos" },
+              { name: "Design", desc: "Criativo", link: "/design" },
+              { name: "Marketing", desc: "Estratégico", link: "/marketing" }
             ].map((service, index) => (
-              <div key={service.name} className="text-center group cursor-pointer">
+              <div key={service.name} className="text-center group cursor-pointer" onClick={() => window.location.href = service.link}>
                 <div className="bg-card/50 rounded-lg p-4 border border-border/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:shadow-elegant">
                   <h3 className="font-semibold text-foreground mb-1">{service.name}</h3>
                   <p className="text-sm text-secondary">{service.desc}</p>

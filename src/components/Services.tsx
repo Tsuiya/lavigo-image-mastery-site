@@ -70,7 +70,14 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="ghost" className="group-hover:text-secondary transition-colors duration-300">
+                <Button 
+                  variant="ghost" 
+                  className="group-hover:text-secondary transition-colors duration-300"
+                  onClick={() => {
+                    const links = ["/fotografia", "/videos", "/design", "/marketing"];
+                    window.location.href = links[services.indexOf(service)];
+                  }}
+                >
                   Saiba mais
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
@@ -88,7 +95,12 @@ const Services = () => {
             <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
               Entre em contato conosco e descubra como podemos elevar sua marca ao próximo nível.
             </p>
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6 bg-background text-foreground hover:bg-background/90">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-lg px-8 py-6 bg-background text-foreground hover:bg-background/90"
+              onClick={() => window.open("https://wa.me/5516991609339", "_blank")}
+            >
               Solicitar Orçamento
             </Button>
           </div>
