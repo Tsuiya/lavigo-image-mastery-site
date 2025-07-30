@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { name: "Início", href: "#hero" },
@@ -13,8 +15,41 @@ const Header = () => {
     { name: "Contato", href: "#contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+      
+      // Track active section
+      const sections = navItems.map(item => item.href.substring(1));
+      const scrollPosition = window.scrollY + 100;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border ${
+      isScrolled ? 'bg-background/98 backdrop-blur-md shadow-lg' : 'bg-background/80 backdrop-blur-sm'
+    }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -32,7 +67,11 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className={`relative text-muted-foreground hover:text-foreground transition-colors duration-200 ${
+                  activeSection === item.href.substring(1) 
+                    ? 'text-secondary after:content-[""] after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-0.5 after:bg-secondary after:rounded-full' 
+                    : ''
+                }`}
               >
                 {item.name}
               </a>
@@ -41,8 +80,12 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex">
-            <Button variant="premium" size="lg">
-              Fale Conosco
+            <Button 
+              variant="premium" 
+              size="lg"
+              onClick={scrollToContact}
+            >
+              Solicitar Orçamento
             </Button>
           </div>
 

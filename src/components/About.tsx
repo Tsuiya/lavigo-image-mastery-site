@@ -7,31 +7,31 @@ const About = () => {
   const values = [
     {
       icon: Target,
-      title: "Precisão",
-      description: "Cada projeto é executado com atenção meticulosa aos detalhes, garantindo resultados que superam expectativas."
+      title: "Excelência 4K",
+      description: "Padrão cinematográfico como mínimo aceitável que entrega resultados mensuráveis e impacto visual incomparável."
     },
     {
       icon: Zap,
-      title: "Inovação",
-      description: "Utilizamos as mais recentes tecnologias e tendências para manter sua marca sempre à frente da concorrência."
+      title: "Exclusividade Premium",
+      description: "Atendimento customizado para apenas 10-15 marcas por mês, garantindo foco total e execução imperial."
     },
     {
       icon: Award,
-      title: "Excelência",
-      description: "Compromisso com a qualidade premium em todos os aspectos do nosso trabalho, sem exceções."
+      title: "Transparência Total",
+      description: "Metas claras, relatórios detalhados e entrega pontual que constrói confiança e resultados duradouros."
     },
     {
       icon: Users,
-      title: "Parceria",
-      description: "Construímos relacionamentos duradouros, trabalhando como uma extensão da sua equipe."
+      title: "Liderança de Mercado",
+      description: "Guiamos clientes ao topo do ranking de engajamento e vendas com estratégias que dominam nichos."
     }
   ];
 
   const stats = [
-    { number: "150+", label: "Projetos Entregues" },
-    { number: "50+", label: "Clientes Satisfeitos" },
-    { number: "5", label: "Anos de Experiência" },
-    { number: "98%", label: "Taxa de Satisfação" }
+    { number: "72h", label: "Tempo de Execução" },
+    { number: "15", label: "Marcas por Mês" },
+    { number: "4K", label: "Padrão Mínimo" },
+    { number: "100%", label: "Satisfação Garantida" }
   ];
 
   return (
@@ -61,16 +61,24 @@ const About = () => {
             </div>
             
             <div className="space-y-4 text-muted-foreground">
-              <p className="text-lg leading-relaxed">
-                Na Lavigo, acreditamos que cada marca tem uma história única para contar. 
-                Nossa missão é capturar essa essência e traduzi-la em experiências visuais 
-                impactantes que conectam, engajam e convertem.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Com uma abordagem centrada em resultados e um olhar sempre voltado para a 
-                inovação, ajudamos empresas de todos os portes a construírem uma presença 
-                digital forte e uma identidade visual memorável.
-              </p>
+              <ul className="space-y-3 text-lg">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
+                  <span><strong>Não seguimos tendências</strong> — nós as decretamos com padrão 4K imperial</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
+                  <span><strong>Atendimento exclusivo</strong> para 10-15 marcas por mês com foco total</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
+                  <span><strong>Execução garantida</strong> em até 72 horas com diagnóstico gratuito</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
+                  <span><strong>PMEs dominando mercados</strong> com estratégias incrivelmente precisas</span>
+                </li>
+              </ul>
             </div>
 
             <div className="mt-8">
@@ -109,15 +117,15 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="text-center group border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300">
+              <Card key={index} className="text-center group border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-elegant hover:scale-105 transition-all duration-300 cursor-pointer">
                 <CardContent className="pt-8 pb-6">
-                  <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary/20 transition-colors duration-300">
-                    <value.icon className="h-8 w-8 text-secondary" />
+                  <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary/20 group-hover:scale-110 transition-all duration-300">
+                    <value.icon className="h-8 w-8 text-secondary group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h4 className="text-xl font-semibold text-foreground mb-3">
+                  <h4 className="text-xl font-semibold text-foreground mb-3 group-hover:text-secondary transition-colors duration-300">
                     {value.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                     {value.description}
                   </p>
                 </CardContent>

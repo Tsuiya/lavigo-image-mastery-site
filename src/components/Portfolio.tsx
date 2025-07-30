@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play } from "lucide-react";
+import { useState } from "react";
 
 const Portfolio = () => {
   // Placeholder videos - será substituído por uploads reais
@@ -37,6 +38,7 @@ const Portfolio = () => {
   ];
 
   const categories = ["Todos", "Vídeo Institucional", "Fotografia", "Comercial", "Documentário"];
+  const [activeCategory, setActiveCategory] = useState("Todos");
 
   return (
     <section id="portfolio" className="py-20 bg-muted/20">
@@ -55,8 +57,13 @@ const Portfolio = () => {
             {categories.map((category) => (
               <Badge 
                 key={category} 
-                variant="outline" 
-                className="cursor-pointer hover:bg-secondary hover:text-foreground transition-colors duration-200 px-4 py-2"
+                variant={activeCategory === category ? "default" : "outline"}
+                className={`cursor-pointer transition-all duration-200 px-4 py-2 ${
+                  activeCategory === category 
+                    ? 'bg-secondary text-primary-foreground border-secondary scale-105' 
+                    : 'hover:bg-secondary/10 hover:text-secondary hover:border-secondary/50'
+                }`}
+                onClick={() => setActiveCategory(category)}
               >
                 {category}
               </Badge>
@@ -74,14 +81,19 @@ const Portfolio = () => {
                     src={video.thumbnail} 
                     alt={video.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
                   
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button variant="hero" size="lg" className="bg-background/90 text-foreground hover:bg-background">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                    <Button variant="hero" size="lg" className="bg-background/90 text-foreground hover:bg-background mb-4">
                       <Play className="mr-2 h-5 w-5" />
                       Assistir
                     </Button>
+                    <div className="text-center px-4">
+                      <h4 className="text-white font-semibold text-lg mb-1">{video.title}</h4>
+                      <p className="text-white/80 text-sm">{video.category}</p>
+                    </div>
                   </div>
 
                   {/* Duration Badge */}

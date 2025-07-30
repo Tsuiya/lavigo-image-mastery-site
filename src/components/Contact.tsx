@@ -56,66 +56,59 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-foreground">Nome</Label>
-                  <Input 
-                    id="name" 
-                    placeholder="Seu nome completo"
-                    className="bg-background/50 border-border focus:border-secondary"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="company" className="text-foreground">Empresa</Label>
-                  <Input 
-                    id="company" 
-                    placeholder="Nome da empresa"
-                    className="bg-background/50 border-border focus:border-secondary"
-                  />
-                </div>
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-foreground">Nome Completo *</Label>
+                <Input 
+                  id="name" 
+                  placeholder="Como podemos te chamar?"
+                  className="bg-background/50 border-border focus:border-secondary"
+                  required
+                />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-foreground">Email</Label>
+                  <Label htmlFor="email" className="text-foreground">Email *</Label>
                   <Input 
                     id="email" 
                     type="email" 
                     placeholder="seu@email.com"
                     className="bg-background/50 border-border focus:border-secondary"
+                    required
+                    onBlur={(e) => {
+                      const email = e.target.value;
+                      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                      if (email && !isValid) {
+                        e.target.style.borderColor = 'red';
+                      } else {
+                        e.target.style.borderColor = '';
+                      }
+                    }}
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-foreground">Telefone</Label>
+                  <Label htmlFor="phone" className="text-foreground">WhatsApp *</Label>
                   <Input 
                     id="phone" 
-                    placeholder="(11) 99999-9999"
+                    placeholder="(16) 99999-9999"
                     className="bg-background/50 border-border focus:border-secondary"
+                    required
+                    onChange={(e) => {
+                      let value = e.target.value.replace(/\D/g, '');
+                      value = value.replace(/(\d{2})(\d)/, '($1) $2');
+                      value = value.replace(/(\d{5})(\d)/, '$1-$2');
+                      e.target.value = value;
+                    }}
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="service" className="text-foreground">Serviço de Interesse</Label>
-                <select 
-                  id="service"
-                  className="w-full p-3 rounded-md bg-background/50 border border-border focus:border-secondary text-foreground"
-                >
-                  <option value="">Selecione um serviço</option>
-                  <option value="fotografia">Fotografia</option>
-                  <option value="video">Produção de Vídeo</option>
-                  <option value="design">Design</option>
-                  <option value="marketing">Marketing</option>
-                  <option value="completo">Pacote Completo</option>
-                </select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message" className="text-foreground">Mensagem</Label>
+                <Label htmlFor="message" className="text-foreground">Conte sobre seu projeto</Label>
                 <Textarea 
                   id="message" 
-                  placeholder="Conte-nos sobre seu projeto..."
-                  rows={4}
+                  placeholder="Qual é o seu objetivo? Que tipo de resultado você busca?"
+                  rows={3}
                   className="bg-background/50 border-border focus:border-secondary resize-none"
                 />
               </div>

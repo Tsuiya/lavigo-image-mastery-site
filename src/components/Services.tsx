@@ -6,27 +6,31 @@ const Services = () => {
   const services = [
     {
       icon: Camera,
-      title: "Fotografia Profissional",
-      description: "Capturamos a essência da sua marca com imagens de alta qualidade que contam histórias e conectam com seu público.",
-      features: ["Fotografia corporativa", "Ensaios de produto", "Eventos empresariais", "Retratos executivos"]
+      title: "Fotografia 4K",
+      description: "Padrão cinematográfico que eleva sua marca com qualidade imperial.",
+      features: ["+50% mais engajamento", "Entrega em 72h", "Padrão 4K garantido"],
+      link: "/fotografia"
     },
     {
       icon: Video,
       title: "Produção de Vídeo",
-      description: "Criamos conteúdo audiovisual impactante que transmite sua mensagem de forma envolvente e memorável.",
-      features: ["Vídeos institucionais", "Comerciais", "Documentários", "Conteúdo para redes sociais"]
+      description: "Conteúdo audiovisual que comanda atenção e gera resultados mensuráveis.",
+      features: ["+80% retenção de audiência", "Estratégia incluída", "Roteiro profissional"],
+      link: "/videos"
     },
     {
       icon: Palette,
-      title: "Design Criativo",
-      description: "Desenvolvemos identidades visuais consistentes e materials gráficos que fortalecem sua presença no mercado.",
-      features: ["Identidade visual", "Design gráfico", "Materiais impressos", "Interfaces digitais"]
+      title: "Design Estratégico",
+      description: "Identidades visuais que dominam mercados e conquistam clientes.",
+      features: ["+60% reconhecimento da marca", "Manual completo", "Aplicações ilimitadas"],
+      link: "/design"
     },
     {
       icon: TrendingUp,
-      title: "Marketing Estratégico",
-      description: "Estratégias de marketing personalizadas que posicionam sua marca como líder no seu segmento.",
-      features: ["Consultoria estratégica", "Gestão de redes sociais", "Campanhas publicitárias", "Análise de mercado"]
+      title: "Tráfego Pago",
+      description: "Campanhas precisas que transformam investimento em resultados imperiais.",
+      features: ["+200% ROI médio", "Relatórios semanais", "Otimização contínua"],
+      link: "/marketing"
     }
   ];
 
@@ -47,14 +51,18 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={service.title} className="group hover:shadow-elegant transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm">
+            <Card 
+              key={service.title} 
+              className="group hover:shadow-elegant hover:scale-[1.02] transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm cursor-pointer"
+              onClick={() => window.location.href = service.link}
+            >
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 rounded-lg bg-secondary/10 group-hover:bg-secondary/20 transition-colors duration-300">
-                    <service.icon className="h-8 w-8 text-secondary" />
+                    <service.icon className="h-8 w-8 text-secondary group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
+                    <CardTitle className="text-xl text-foreground group-hover:text-secondary transition-colors duration-300">{service.title}</CardTitle>
                   </div>
                 </div>
                 <CardDescription className="text-muted-foreground text-base leading-relaxed">
@@ -62,23 +70,19 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-3 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                      {feature}
+                    <li key={idx} className="flex items-center gap-3 text-foreground font-medium">
+                      <div className="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Button 
                   variant="ghost" 
-                  className="group-hover:text-secondary transition-colors duration-300"
-                  onClick={() => {
-                    const links = ["/fotografia", "/videos", "/design", "/marketing"];
-                    window.location.href = links[services.indexOf(service)];
-                  }}
+                  className="w-full group-hover:bg-secondary/10 group-hover:text-secondary transition-all duration-300"
                 >
-                  Saiba mais
+                  Ver Detalhes
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </CardContent>

@@ -29,7 +29,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Agência de marketing premium especializada em fotografia, vídeo, design e estratégias que elevam sua marca ao próximo nível.
+            Transformamos visões em realidade visual para <strong>PMEs</strong> que buscam dominar seu mercado.
           </p>
 
           {/* CTA Buttons */}
@@ -38,11 +38,26 @@ const Hero = () => {
               variant="premium" 
               size="lg" 
               className="text-lg px-8 py-6"
-              onClick={() => window.open("https://wa.me/5516991609339", "_blank")}
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
-              Fale Conosco no WhatsApp
+              Solicitar Orçamento
             </Button>
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-lg px-8 py-6 text-muted-foreground"
+              onClick={() => {
+                const portfolioSection = document.getElementById('portfolio');
+                if (portfolioSection) {
+                  portfolioSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <Play className="mr-2 h-5 w-5" />
               Ver Portfolio
             </Button>

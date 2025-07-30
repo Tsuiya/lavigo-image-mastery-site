@@ -106,6 +106,20 @@ const Footer = () => {
                 <span className="text-muted-foreground">Ibitinga, SP</span>
               </div>
             </div>
+            
+            {/* Mini Map */}
+            <div className="mt-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.8!2d-48.831593!3d-21.7577172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf2992cb22b801%3A0x543c7f9d14ec33c0!2sAg%C3%AAncia%20Lavigo!5e0!3m2!1spt!2sbr!4v1735566789123!5m2!1spt!2sbr"
+                width="100%"
+                height="120"
+                style={{ border: 0, borderRadius: '8px' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Lavigo"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -119,10 +133,16 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center gap-6">
-              <a href="#" className="text-muted-foreground hover:text-secondary transition-colors duration-200 text-sm">
+              <a href="/blog" className="text-muted-foreground hover:text-secondary transition-colors duration-200 text-sm">
+                Blog
+              </a>
+              <a href="/cases" className="text-muted-foreground hover:text-secondary transition-colors duration-200 text-sm">
+                Cases
+              </a>
+              <a href="/privacidade" className="text-muted-foreground hover:text-secondary transition-colors duration-200 text-sm">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-muted-foreground hover:text-secondary transition-colors duration-200 text-sm">
+              <a href="/termos" className="text-muted-foreground hover:text-secondary transition-colors duration-200 text-sm">
                 Termos de Uso
               </a>
               <Button
